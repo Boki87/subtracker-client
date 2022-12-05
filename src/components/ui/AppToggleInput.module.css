@@ -1,0 +1,23 @@
+.app_toggle {
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: var(--color-background-light);
+  position: relative;
+  display: inline-block;
+}
+
+.app_toggle__ball {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  postion: absolute;
+  top: 1px;
+  left: 1px;
+  background: var(--color-background-dark);
+  transition: all 0.3s ease-in-out;
+}
+
+.on {
+  background: var(--color-highlight);
+}

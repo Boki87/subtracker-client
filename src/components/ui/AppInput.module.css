@@ -1,0 +1,24 @@
+.app_input {
+  width: 100%;
+  height: 42px;
+  border-radius: 10px;
+  color: var(--text-color-light);
+  display: flex;
+  overflow: hidden;
+  padding: 0px 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.app_input input {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  height: 100%;
+  flex: 1;
+  border-radius: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--text-color-light);
+  padding-left: 10px;
+}

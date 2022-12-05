@@ -1,0 +1,22 @@
+.sub_editor {
+  min-width: 300px;
+  flex: 1;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+@media screen and (max-width: 700px) {
+  .sub_editor {
+    width: 0px;
+    flex: none;
+    min-width: 0px;
+    overflow-y: hidden;
+  }
+  .active {
+    min-width: 300px;
+    width: 100%;
+    flex: 1;
+  }
+}
+

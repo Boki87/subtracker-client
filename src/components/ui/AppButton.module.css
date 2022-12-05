@@ -1,0 +1,70 @@
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.app_button {
+  padding: 3px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  height: 37px;
+  min-width: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease-in-out;
+}
+
+.app_button:hover {
+  background: var(--color-shade-2);
+}
+.app_button:active {
+  background: var(--color-shade-4);
+}
+
+.app_button_primary {
+  background: var(--color-highlight);
+  color: #fff;
+}
+
+.app_button_primary:hover {
+  background: var(--color-highlight-light);
+}
+
+.app_button_primary:active {
+  background: var(--color-highlight);
+}
+
+.app_button_secondary {
+  background: var(--color-shade-1);
+  color: var(--text-color-light);
+}
+
+.app_button_secondary:hover {
+  background: var(--color-shade-2);
+}
+.app_button_secondary:active {
+  background: var(--color-shade-4);
+}
+
+.sm {
+  height: 25px;
+  max-width: 15px;
+  padding: 0px;
+  font-size: 0.7rem;
+}
+
+.md {
+  height: 45px;
+}
+
+.xl {
+  height: 55px;
+}

@@ -1,0 +1,35 @@
+.sub_list {
+  min-width: 300px;
+  flex: 1;
+  height: 100%;
+  background: var(--color-background);
+  border-right: 1px solid var(--color-shade-1);
+  overflow-y: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.sub_list_inner {
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  min-width: 0px;
+  width: 0px;
+  paddgin: 0px;
+  flex: none;
+}
+
+.sub_list_items {
+  flex: 1;
+  overflow-x: auto;
+}
+
+@media screen and (min-width: 1000px) {
+  .sub_list {
+    max-width: 400px;
+  }
+}
