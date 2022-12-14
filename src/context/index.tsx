@@ -18,7 +18,7 @@ const CombinedContext = ({ children }: { children: ReactNode }) => {
     <UserContext>
       <ModalsContext>
         <NavigationContext>
-          <SubscriptionContext>{children}</SubscriptionContext>
+          <SubscriptionContext> {children} </SubscriptionContext>
         </NavigationContext>
       </ModalsContext>
     </UserContext>

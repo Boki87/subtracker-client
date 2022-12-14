@@ -18,6 +18,8 @@ type TCategoryModal = {
 interface IModalsContext {
   confirmModal: TConfirmModal;
   categoryModal: TCategoryModal;
+  isSettingsOpen: boolean;
+  setIsSettingsOpen: (val: boolean) => void;
 }
 
 const initialState: IModalsContext = {
@@ -34,6 +36,8 @@ const initialState: IModalsContext = {
     openCategoryModal: () => {},
     closeCategoryModal: () => {},
   },
+  isSettingsOpen: false,
+  setIsSettingsOpen: () => {},
 };
 
 const modalsContext = createContext(initialState);
@@ -48,6 +52,8 @@ const ModalsContext = ({ children }: { children: ReactNode }) => {
   const [categoryId, setCategoryId] = useState<string | null>(null);
 
   const resolver = useRef<Function | null>();
+
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   function openConfirmModal(msg: string): Promise<boolean> {
     setConfirmModalMessage(msg);
@@ -100,6 +106,8 @@ const ModalsContext = ({ children }: { children: ReactNode }) => {
           openCategoryModal: openCategoryModalHandler,
           closeCategoryModal: closeCategoryModalHandler,
         },
+        isSettingsOpen,
+        setIsSettingsOpen,
       }}
     >
       {children}

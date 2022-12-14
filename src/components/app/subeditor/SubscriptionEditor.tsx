@@ -1,6 +1,7 @@
 import css from "./SubscriptionEditor.module.css";
 import { useSubscriptionContext } from "../../../context";
 import EditorForm from "./EditorForm";
+import SettingsPanel from "../../app/SettingsPanel";
 
 const SubscriptionEditor = () => {
   const { isSubEditorOpen } = useSubscriptionContext();
@@ -12,6 +13,8 @@ const SubscriptionEditor = () => {
       }
     >
       <EditorForm />
+
+      <SettingsPanel />
     </div>
   );
 };

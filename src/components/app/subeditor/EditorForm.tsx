@@ -28,6 +28,7 @@ const EditorForm = () => {
   const navigate = useNavigate();
 
   const [canEdit, setCanEdit] = useState(false);
+
   const [subData, setSubData] = useState<Subscription | null>(null);
 
   const currencies = useCurrency();

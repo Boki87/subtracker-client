@@ -11,7 +11,7 @@ interface IAppButton {
 }
 
 const AppButton = (props: IAppButton) => {
-  const { children, variant, size, loading } = props;
+  const { children, variant, size, loading, ...restProps } = props;
   const classList = [css.app_button];
 
   if (variant === "primary") {
@@ -42,7 +42,11 @@ const AppButton = (props: IAppButton) => {
   }
 
   return (
-    <button className={generateClassName(classList)} type="button" {...props}>
+    <button
+      className={generateClassName(classList)}
+      type="button"
+      {...restProps}
+    >
       {!loading ? (
         children
       ) : (
